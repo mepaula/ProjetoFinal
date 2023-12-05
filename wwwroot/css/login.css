@@ -1,0 +1,25 @@
+html{
+    font-size: 14px;
+    background-color: lavenderblush;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lavenderblush;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: lavenderblush;
+    text-align: center;
+    width:850px;
+    height: 400px;
+    border: 1px solid black;
+}

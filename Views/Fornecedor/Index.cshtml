@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjetoFinal.Models.Fornecedor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Regsitre Aqui</h1>
+
+<p>
+    <a asp-action="Create">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FornecedorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FornecedorEmail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FornecedorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FornecedorEmail)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FornecedorId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.FornecedorId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.FornecedorId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
